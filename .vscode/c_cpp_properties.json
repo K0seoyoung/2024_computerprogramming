@@ -3,8 +3,6 @@
         {
             "name": "Mac",
             "includePath": [
-                "${workspaceFolder}/headerFile",
-                "${workspaceFolder}/cppFile",
                 "/usr/local/include",
                 "/Library/Developer/CommandLineTools/usr/bin"
             ],
