@@ -8,8 +8,8 @@
 class BuildingInfo {
 private:
     Shape* shape;
-    std::vector<std::pair<double,double>> windows; // (x,y)
-    std::vector<std::pair<double,double>> doors;   // (x,y)
+    std::vector<std::pair<double,double> > windows; // (x,y)
+    std::vector<std::pair<double,double> > doors;   // (x,y)
 
 public:
     BuildingInfo(Shape* s = nullptr);
@@ -17,8 +17,8 @@ public:
     void addWindow(double x, double y);
     void addDoor(double x, double y);
     Shape* getShape() const;
-    const std::vector<std::pair<double,double>>& getWindows() const;
-    const std::vector<std::pair<double,double>>& getDoors() const;
+    const std::vector<std::pair<double,double> >& getWindows() const;
+    const std::vector<std::pair<double,double> >& getDoors() const;
 };
 
 #endif
