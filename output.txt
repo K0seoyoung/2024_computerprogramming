@@ -1,0 +1,7 @@
+Final Furniture Layout:
+Furniture: Sofa Position(3.25133,9.56555) Rotation: 0deg Size(1x1)
+Furniture: TV Position(1.10337,9.04996) Rotation: 0deg Size(1x1)
+Furniture: Table Position(9.00949,5.73408) Rotation: 0deg Size(1x1)
+Furniture: Chair Position(3.55433,4.8161) Rotation: 0deg Size(1x1)
+Style Recommendations:
+- High-end recommendation: Use premium hardwood flooring.
