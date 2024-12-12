@@ -7,10 +7,10 @@
 #include "Furniture.h"
 #include "InteriorOptimizer.h"
 #include "StyleRecommender.h"
+#include "GenericContainer.h"
 #include <vector>
 #include <exception>
 
-// 예외 클래스
 class BudgetExceededException : public std::exception {
 public:
     const char* what() const noexcept override {
@@ -23,16 +23,23 @@ private:
     BuildingInfo* buildingInfo;
     UserPreferences preferences;
     Constraints constraints;
-    InteriorOptimizer* optimizer; // 다형성 활용
+    InteriorOptimizer* optimizer; 
     StyleRecommender styleRec;
 
-    std::vector<Furniture> placedFurnitures;
+    GenericContainer<Furniture> placedFurnitures;  // 가구 컨테이너
+
 public:
     Assistant(BuildingInfo* bi, const UserPreferences& up, const Constraints& c, InteriorOptimizer* opt);
     ~Assistant();
 
     void arrangeFurniture();
-    void printResult();
+    // 기존 printResult()는 파일출력을 main에서 하기로 했으므로 선택적으로 주석처리 가능
+    // void printResult();
+
+    // placedFurnitures를 외부에서 접근할 수 있도록 하는 함수 추가
+    const std::vector<Furniture>& getPlacedFurnitures() const {
+        return placedFurnitures.getItems();
+    }
 };
 
 #endif

@@ -15,7 +15,9 @@ void Furniture::setDimensions(double w, double d) {
 }
 
 std::ostream& operator<<(std::ostream& os, const Furniture& f) {
-    os << "Furniture: " << f.name << " Position(" << f.x << "," << f.y << ") "
-       << "Rotation: " << f.rotation << "deg Size(" << f.width << "x" << f.depth << ")";
+    os << "Furniture: " << f.name 
+       << " Position(" << f.x << "," << f.y << ") "
+       << "Rotation: " << f.rotation << "deg "
+       << "Size(" << f.width << "x" << f.depth << ")";
     return os;
 }

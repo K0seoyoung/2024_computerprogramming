@@ -19,6 +19,13 @@ public:
     void setRotation(double r);
     void setDimensions(double w, double d);
 
+    std::string getName() const { return name; }
+    double getX() const { return x; }       // 추가
+    double getY() const { return y; }       // 추가
+    double getRotation() const { return rotation; }
+    double getWidth() const { return width; }
+    double getDepth() const { return depth; }
+
     // 연산자 오버로딩: << 연산자 오버로드로 가구 정보 출력
     friend std::ostream& operator<<(std::ostream& os, const Furniture& f);
 
